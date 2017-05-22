@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Join Us! We are actively looking for developers to help build Parsl"
+date:  2016-09-24 10:13:16 -0700
+type: join
+---
+[Join Us](/joinus.html). We are actively looking for developers to help develop Parsl.
