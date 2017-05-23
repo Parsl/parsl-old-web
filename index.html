@@ -1,0 +1,135 @@
+---
+layout: default
+title: Parsl A Parallel Scripting Library for Python
+---
+
+
+    <div class="wide container-fluid" role="main">
+      <div class="row title-page">
+	<div class="container text-center">
+	  <h1>Parsl: A Parallel Scripting Library for Python</h1>
+	  <p>Parsl is a parallel scripting library for Python. It provides a model by which complex workflows 
+    can be represented in an intuitive Python-based control application. It facilitates transparent parallel
+    execution of workflow components (apps) on any distributed or parallel computing system.</p>
+	</div>
+      </div>
+    </div>
+
+<main class="container">
+	<div class="container-fluid" >
+		<div class="row" >
+		<div class="container">
+		
+			<div class="page-header">
+        			<h2>Why Parsl?</h2>
+      			</div>
+
+			<div class="media col-sm-12">
+			    <div class="media-left hl-icon">
+				    <img src='images/server-rack.png'>
+			    </div>
+			    <div class="media-body">
+			        <p>Parsl is parallel: it runs multiple programs concurrently as soon as their inputs are available, reducing the need for complex parallel programming. </p>
+			    </div>
+			</div>
+			
+                        <div class="media col-sm-12">
+                            <div class="media-left hl-icon">
+                                <img src='images/wand.png'>
+                            </div>
+                            <div class="media-body">
+                                <p>Parsl is easy: short, simple scripts can do large-scale work. The same script runs on multicore computers, clusters, grids, clouds, and supercomputers. </p>
+                            </div>
+                        </div>
+                        
+                        <div class="media col-sm-12">
+                            <div class="media-left hl-icon">
+                                <img src='images/bird.png'>
+                            </div>
+                            <div class="media-body">
+                                <p>Parsl is fast: it can run a million programs, thousands at a time, launching hundreds per second. </p>
+                            </div>
+                        </div>
+
+                        <div class="media col-sm-12">
+                            <div class="media-left hl-icon">
+                                <img src='images/flask.png'>
+                            </div>
+                            <div class="media-body">
+                                <p>Parsl is flexible: it is being used in physical sciences, biological sciences, social sciences, humanities, computer science, education. </p>
+                            </div>
+                        </div>
+
+                        <div class="media col-sm-12">
+                            <div class="media-left hl-icon">
+                                <img src='images/python.png'>
+                            </div>
+                            <div class="media-body">
+                                <p>Parsl is Python: developers write pure Python code with decorators around parallel applciations. </p>
+                            </div>
+                        </div>			
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid" >
+                <div class="row" >
+                    <div class="container">
+                        <div class="page-header">
+                            <h2>Using Parsl</h2>
+                        </div>
+                        <div class="media col-sm-12">
+                            <p>Parsl allows you to write functions that execute in parallel. Functions can then be linked together with dependencies to create workflows in Python. Parsl wraps python functions into Apps with the @App decorator. Decorated functions execute in parallel when all their inputs are ready.</p>
+                            <div>
+                                <pre><code>
+@App('python', dfk)
+def hello ():
+    return 'Hello World!'
+
+app_future = hello()
+                                </code></pre>
+
+                            <p>
+Unlike a regular Python function, when an App is called it returns an AppFuture. Futures act as a proxy to the results or exceptions that the App will produce once it's execution completes.
+                            </p>
+                            
+                            <p> 
+In addition to Python functions, Parsl can also be used to coordinate parallel execution of external Apps. Common examples are the many science aplications that are invoked from the command line. Parsl manages input/output data using DataFutures.
+                            </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+<div class="container-fluid">
+    <div class="container">
+	<h2>News</h2>
+            <div class="row news">
+                {% for post in site.posts limit:4 %}
+                <div class="col-xs-3">
+                    <div class="center-block">
+                        <div class="glyphicon-circle">
+                            {% if post.type == "award" %}
+                                <span class="glyphicon glyphicon-glass"></span>
+                            {% elsif post.type == "paper" %}
+                                <span class="glyphicon glyphicon-duplicate"></span>
+                            {% elsif post.type == "presentation" %}
+                                <span class="glyphicon glyphicon-blackboard"></span>
+                            {% elsif post.type == "join" %}
+                                <span class="glyphicon glyphicon-user"></span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <p>{{ post.content }}</p>
+                </div>
+            {% endfor %}
+            </div>
+
+
+    </div>
+</div>
+
+</main>
