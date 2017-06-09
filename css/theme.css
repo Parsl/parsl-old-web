@@ -24,7 +24,9 @@
 body {
   padding-top: 40px; 
   padding-bottom: 0px;
-  font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+  font-family: "Hind", sans-serif;
+  font-size: 18px;
+  color: #333;
 }
 							
 .page-header{
@@ -39,42 +41,49 @@ body {
  */
 
 .navbar {
-  min-height: 40px;
+  min-height: 60px;
+  color: blue;
 }
 
 .navbar-nav > li > a {
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
 }
 
 .navbar-brand {
-  height: 40px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  height: 60px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 			
 .logo{
-  height: 30px;
-  margin-top: 6px;
+  /*height: 30px;
+  margin-top: 6px;*/
 }
 
+.navbar-custom {
+    min-height: 60px;
+    background-color: #41568c;
+    color:#ffffff;
+    border-radius:0;
+}
 
 
 /*
  * Banner image
-* Img if we want to  buy
  * http://www.istockphoto.com/photo/virtual-data-center-gm594921086-101984661
  */
 
 .title-page {
   color: #fff;
-  background-image:url('../images/background2.png');
+  background-color: #41568c;
   background-size: cover; 
 }
 
 .title-page h1 {
   margin-bottom: 5px;
 }
+
 .title-page h2 {
   margin-top: 0;
   font-size: 24px;
@@ -83,8 +92,8 @@ body {
 }
 
 .title-page {
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .title-page .text-center {
@@ -105,7 +114,7 @@ body {
 .title-page-sm {
   background-color: #8e2222;
   color: #abcfea;
-  padding: 30px 0;
+  padding: 10px 0;
 }
 .title-page-sm h2 {
   margin: 0;
@@ -181,12 +190,6 @@ hr {
 	background-color: green;
 }
 			
-.approach{
-}
-				
-#involved .panel-body {
-  height: auto;
-}
 
 .social-link{
 	font-size: 26px;
@@ -274,30 +277,34 @@ hr {
 
 .hl-icon{
     float: left;
-    background-color: #8e2222;
+/*    background-color: #8e2222;*/
+    background-color: #41568c;
     border-radius: 3pt;
     margin: 0px;
     padding: 0px;
     margin-right: 8pt;
 }
-.glyphicon-circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid #8e2222;
-    background-color: white;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle; 
-    font-size: 22px;
-    color: #8e2222;
-}
  
-.center-block{
+.start-button{
     display: table;
     margin: 0 auto;
+    width:160px;
 }
 
-.news{
-    font-size: small;
+.start-button span{
+    margin-right:5px;
+}
+
+.news li::before {
+    content: "⇒";
+    font-size: 170%;
+    margin: 0 0 0 -26pt;
+    position: absolute;
+    top: 0;
+    vertical-align: middle;
+}
+.news li {
+    line-height: 180%;
+    margin-left: 20pt;
+    position: relative;
 }
