@@ -15,11 +15,9 @@ title: Parsl A Parallel Scripting Library for Python
     </div>
 
 
-<main class="container">
-
-	<div class="container-fluid why-container" >
+	<section id="why" class="parsl-section banner">
+	    <div class="container" >
 		<div class="row" >
-		<div class="container col-sm-12">
 			<div class="page-header">
         			<h2>Why Parsl?</h2>
       			</div>
@@ -71,12 +69,15 @@ title: Parsl A Parallel Scripting Library for Python
                     </div>
                 </div>
             </div>
+	</div>
+	</section>
 
-	    <div class="container-fluid get-started-container"  >
-                        <div class="page-header">
+	<section id="get-started" class="parsl-section banner">
+		 <div class="container"  >
+                     <div class="row">
+			<div class="page-header">
                             <h2>Get Started</h2>
                         </div>
-			<div class="row">
                         <div class="col-sm-4">
 				<div class="center-block">
 
@@ -105,24 +106,24 @@ title: Parsl A Parallel Scripting Library for Python
 
                         </div>
                     </div>
-			</div>
+		</div>
+	</section>
+	<section id="news" class="parsl-section banner">
 
-
-<div class="container-fluid">
-	    <div class="page-header">
-                 <h2>News</h2>
-            </div>
-            <div class="row news">
-		<ul>
+	    <div class="container">
+		<div class="row"> 
+	    	<div class="page-header">
+                     <h2>News</h2>
+            	</div>
+            	<div class="news">
+		    <ul>
                     {% for post in site.posts limit:4 %}
                 	<li>
                             <p><b>{{ post.date | date: "%-d %b %Y" }}</b>: {{ post.content | remove: '<p>' | remove: '</p>'  }}</p>
                         </li>
             	    {% endfor %} 
-		</ul>
-            </div>
-
-
-</div>
-
-</main>
+		    </ul>
+            	</div>
+		</div>
+	    </div>
+	</section>

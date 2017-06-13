@@ -34,6 +34,17 @@ body {
   text-align: center;
 }
 
+.parsl-section{
+  padding-bottom: 40px;
+}
+
+#why {
+  background-color: #f5f9fd;
+}
+
+#news {
+  background-color: #F1F1F1;
+}
 
 
 /*
