@@ -64,7 +64,7 @@ $( document ).ready(function() {
        
        if ('note' in data['Fields']){
            var pdf_img = $("<img>", {"src" : 'images/pdf.png', "class": "ref-image"});
-           var pdf_link = $("<a>", {"href": data["Fields"]["note"]});
+           var pdf_link = $("<a>", {"href": "publications/" + data["Fields"]["note"]});
            pdf_link.append(pdf_img);
            download_links.append(pdf_link);
        }
