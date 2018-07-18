@@ -1,0 +1,17 @@
+---
+layout: default
+title: News
+---
+    <h1>News</h1>
+
+    {% for n in site.posts %}
+    <div class="row">
+        <div class="col-xs-1">
+        </div>
+        <div class="col-xs-11 news-info">
+            <p><span class="name">{{ n.date | date: '%B %d, %Y' }}</span><br>
+            <p>{{ n.content }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
