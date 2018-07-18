@@ -1,17 +1,28 @@
 ---
 layout: default
-title: News
+title: Parsl A Parallel Scripting Library for Python
 ---
-    <h1>News</h1>
 
-    {% for n in site.posts %}
-    <div class="row">
-        <div class="col-xs-1">
-        </div>
-        <div class="col-xs-11 news-info">
-            <p><span class="name">{{ n.date | date: '%B %d, %Y' }}</span><br>
-            <p>{{ n.content }}</p>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
+<main class="container">
+
+	<div class="container-fluid" >
+		<div class="row" >
+		<div class="container col-sm-12">
+			<div class="page-header">
+        			<h2>News</h2>
+      			</div>
+
+			<div class="media col-sm-12">
+
+			    {% for n in site.posts %}
+			    <div class="row">
+				<div class="col-xs-12 news-info">
+				    <p><span class="name">{{ n.date | date: '%B %d, %Y' }}</span><br>
+				    <p>{{ n.content }}</p>
+				</div>
+			     </div>
+			    {% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
